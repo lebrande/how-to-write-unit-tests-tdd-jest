@@ -1,9 +1,7 @@
 export const formatDate = (dateToFormat: string) => {
-  const [_year, _month, _day] = dateToFormat.split('-');
-
-  const year = +_year;
-  const month = +_month;
-  const day = +_day;
+  const [year, month, day] = dateToFormat
+    .split('-')
+    .map((datePart) => +datePart);
 
   if (year < 1900 || year > 2100) {
     return null;
