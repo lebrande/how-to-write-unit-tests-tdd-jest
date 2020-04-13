@@ -32,4 +32,8 @@ describe('formatDate', () => {
   it('returns null for incorrect year above range (2101-01-01)', () => {
     expect(formatDate('2101-01-01')).toBe(null);
   });
+
+  it('returns null for wrong date (2000-02-30)', () => {
+    expect(formatDate('2000-02-30')).toBe(null);
+  });
 });

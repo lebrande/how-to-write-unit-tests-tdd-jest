@@ -15,6 +15,14 @@ export const formatDate = (dateToFormat: string) => {
     return null;
   }
 
+  if (day <= 31 && day > 28) {
+    const date = new Date(year, month - 1, day);
+
+    if (date.getDate() !== day) {
+      return null;
+    }
+  }
+
   return {
     year,
     month,
