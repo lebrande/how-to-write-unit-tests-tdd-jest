@@ -33,7 +33,15 @@ describe('formatDate', () => {
     expect(formatDate('2101-01-01')).toBe(null);
   });
 
-  it('returns null for wrong date (2000-02-30)', () => {
-    expect(formatDate('2000-02-30')).toBe(null);
+  it('returns null for wrong date (2000-02-31)', () => {
+    expect(formatDate('2000-02-31')).toBe(null);
+  });
+
+  it('returns null for wrong date (2000-04-31)', () => {
+    expect(formatDate('2000-04-31')).toBe(null);
+  });
+
+  it('returns null for wrong date (2000-02-29)', () => {
+    expect(formatDate('2001-02-29')).toBe(null);
   });
 });
